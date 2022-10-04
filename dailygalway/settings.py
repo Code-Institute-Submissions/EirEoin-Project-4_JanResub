@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'cloudinary',
     'django_summernote',
-    'bootstrap',
     'blog',
 ]
 
