@@ -32,6 +32,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['dailygalway.herokuapp.com', 'localhost']
 
+# to avoid errors i am suppose to add this code apparently
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
 
 # Application definition
 
