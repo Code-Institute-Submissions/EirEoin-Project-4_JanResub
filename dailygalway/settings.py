@@ -42,9 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'cloudinary_storage'
-    'django.contrib.staticfiles',
-    'cloudinary'
+    'cloudinary_storage',
+    'cloudinary',
     'blog',
 ]
 
@@ -80,7 +79,7 @@ WSGI_APPLICATION = 'dailygalway.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+# https://docs.djangoproject.com/en/3.2/ref/settings/databases
 
 # DATABASES = {
 #     'default': {
@@ -89,8 +88,9 @@ WSGI_APPLICATION = 'dailygalway.wsgi.application'
 #     }
 #  }
 
+DATABASE_URL = os.getenv('DATABASE_URL')
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': dj_database_url.config(),
 }
 
 # Password validation
@@ -134,7 +134,7 @@ STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-MEDIA_URL ='/media/'
+MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Default primary key field type
