@@ -1,1 +1,1 @@
-web : gunicorn dailygalway.wsgi
+web: gunicorn dailygalway.wsgi
