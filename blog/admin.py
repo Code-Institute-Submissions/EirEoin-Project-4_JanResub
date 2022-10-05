@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment
+from .models import Post, Comment, Tag, TagSubject
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -21,3 +21,11 @@ class CommentAdmin(admin.ModelAdmin):
 
     def approve_comments(self, request, queryset):
         queryset.update(approved=True)
+
+@admin.register(Tag)
+class TagAdmin(admin.ModelAdmin):
+    list_display = ('title', 'subject', 'article_count')
+
+@admin.register(TagSubject)
+class TagSubjectAdmin(admin.ModelAdmin):
+    list_display = ('pk', 'title')
