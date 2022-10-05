@@ -1,1 +1,1 @@
-web : gunicorn dailygalway.wsgi
+web : gunicorn:application --log-file - --log-level debug
