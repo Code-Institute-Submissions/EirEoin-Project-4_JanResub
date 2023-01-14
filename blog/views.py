@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.http import HttpResponseRedirect
 from .models import Post, Tag
 from .forms import CommentForm
 
@@ -28,7 +29,7 @@ class PostDetail(View):
                 "post": post,
                 "comments": comments,
                 "commented": False,
-                "liked": True,
+                "liked": liked,
                 "comment_form": CommentForm()
             },
         )
