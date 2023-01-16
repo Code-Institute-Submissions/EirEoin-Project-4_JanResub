@@ -25,7 +25,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name='post',
-            name='feautured_image',
+            name='featured_image',
             field=cloudinary.models.CloudinaryField(default='placeholder', max_length=255, verbose_name='image'),
         ),
         migrations.AlterField(
