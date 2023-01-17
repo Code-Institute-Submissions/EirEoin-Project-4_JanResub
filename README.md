@@ -41,11 +41,11 @@ I used wireframes to experiment with different layouts, and to test ideas for ho
 <img src = "./static/images/News Post.png" width = 1000>
 
 
-Once we had a solid wireframe in place, we added some creativity to it by experimenting with different visual elements such as typography, color scheme, and imagery. This helped to bring the wireframe to life and give it a more polished and professional appearance.
+Once I had a solid wireframe in place, I added some creativity to it by experimenting with different visual elements such as typography, color scheme, and imagery. This helped to bring the wireframe to life and give it a more polished and professional appearance.
 
-We also had user testing with the wireframes to gather feedback and evaluate the effectiveness of the design choices. I asked my housemates, friends and family to interact with what I created and let me learn from their behaviour. This allowed me to make data-driven decisions and ensure that the final product was tailored to meet the needs of our users.
+I also had user testing with the wireframes to gather feedback and evaluate the effectiveness of the design choices. I asked my housemates, friends and family to interact with what I created and let me learn from their behaviour. This allowed me to make data-driven decisions and ensure that the final product was tailored to meet the needs of our users.
 
-The end result is a user-friendly and intuitive news platform that offers a personalized experience for users. With features such as user-generated content, voting, and commenting, we hope to create a community-driven platform where users can come together to discuss and share news.
+The end result is a user-friendly and intuitive news platform that offers a personalized experience for users. With features such as user-generated content, voting, and commenting, I hope to create a community-driven platform where users can come together to discuss and share news.
 
 
 ### Agile
