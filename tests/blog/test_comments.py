@@ -2,6 +2,7 @@ import unittest
 from django.test import TestCase
 from .models import Comment, Post
 
+
 class CommentModelTest(TestCase):
     def setUp(self):
         self.post = Post.objects.create(title="Test Post", body="Test post body.")

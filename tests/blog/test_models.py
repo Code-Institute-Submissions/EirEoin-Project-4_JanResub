@@ -1,6 +1,7 @@
 from django.test import TestCase
 from .models import Tag, TagSubject, Post
 
+
 class TagTest(TestCase):
     def setUp(self):
         # Create test data

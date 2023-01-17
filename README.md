@@ -46,6 +46,7 @@ Once I had a solid wireframe in place, I added some creativity to it by experime
 I also had user testing with the wireframes to gather feedback and evaluate the effectiveness of the design choices. I asked my housemates, friends and family to interact with what I created and let me learn from their behaviour. This allowed me to make data-driven decisions and ensure that the final product was tailored to meet the needs of our users.
 
 The end result is a user-friendly and intuitive news platform that offers a personalized experience for users. With features such as user-generated content, voting, and commenting, I hope to create a community-driven platform where users can come together to discuss and share news.
+I made sure to put the user at the center of our project by conducting user research and incorporating user feedback throughout the development process. By keeping the user's needs in mind and continually iterating on our design, I was able to create a product that was user-friendly and met the needs of our target audience.
 
 
 ### Agile
@@ -141,6 +142,13 @@ Upon Fixing Broken image field i realised I had a misspelling in my code which t
 In this project, the environment variables were previously exposed and have been changed for security reasons. As a result, a new Cloudinary account had to be created to get a new URL and make everything work again.
 
 ## Testing 
+
+As a developer, I know how important it is to run tests and ensure that my HTML, CSS, and JavaScript code is error-free and meets industry standards. That's why I always make sure to run my code through validators before launching a project. Validators are tools that check the syntax and structure of my code to make sure it is correct and follows best practices. For HTML and CSS, I use the W3C Validator, which checks my code against the latest standards and guidelines. By running my code through these validators, I can be confident that my projects will be reliable and well-built, and that they will work seamlessly on any device or browser. Overall, running tests and using validators is an essential step in the development process and helps me deliver high-quality projects to my clients.
+I only came across a few errors with my finished html, a majority of them were missing alt tags in my img tags. I was happy to see my CSS code ran through the validator with no problem!
+
+<img src = "./static/images/HTML-valid.png" width = 900>
+<img src = "./static/images/CSS-valid.png" width = 900>
+
 ### Tag class 
 
 This test uses Django's built-in TestCase class to create and test instances of the Tag, TagSubject, and Post models. The setUp method is used to create test data that is used in the test methods. The test methods use various assertions to check that the fields and methods of the Tag class are working as expected.
@@ -151,15 +159,21 @@ This test uses Django's built-in TestCase class to create and test instances of 
 
 In this  test case, I create an instance of the Post model, and use it to create an instance of the Comment model in the setUp method. Then, I tested the string representation of the Comment model, the relationship between the Comment and Post models, the default value of the approved field, and the ordering of Comment objects.
 
-<img src = "./static/images/Comments.png" width = 550>
+<img src = "./static/images/comment_test.png" width = 550>
 
 
 ## Deployment 
 
 The site was created using Github and deployed using heroku. The process began on github, connected my repository to heroku + PostGres and deployed on there too. One potential struggle was configuring the database. Heroku's terms of service have changed, so I needed to use ElephantSQL as a database, which was unfamiliar adn tricky at first. This required some additional setup and configuration, which took some time to figure out. Additionally, it required additional code changes to connect to the ElephantSQL database.
+Another challenge I have faced while working with Heroku is dealing with error messages and debugging issues that can arise during the deployment process. This can be especially frustrating if the error messages are unclear or not specific enough to pinpoint the source of the problem. In these cases, it can be helpful to check the logs, do some research online, or ask for help from friends or online communities.
 It took some altering and lot of trial and Error but we truly hope everyone enjoys our creation.
+Overall, working with Heroku can be a rewarding experience, but it can also present some challenges, especially if you are new to the platform or working with unfamiliar technologies. By being prepared and willing to troubleshoot issues as they arise, you can successfully deploy your projects to Heroku and take advantage of its powerful features.
 
 ## Credits 
 
 I used The Coding Institute lessons in The Agile Development, HTML, CSS, Python, Javascript, Django and Postgres to Build this project. I used w3schools.com for some help with functions and model builds. I browsed well populated and heavily user Reddit for inspiration. I also used PEP - 8 to work with Python and realpython.com with the testing. I also used Stackoverflow alot to troubleshoot any problems I have.
 I used the Coding Institute Slack group for help Daily on this project, Thank you especially to everyone on there and to the tutor support that helped along the way!
+
+## Media
+
+all the images used for this project are either photos I have taken myself, created using AI or taken from a real news article such as RTE.
