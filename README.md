@@ -152,14 +152,39 @@ I only came across a few errors with my finished html, a majority of them were m
 ### Tag class 
 
 This test uses Django's built-in TestCase class to create and test instances of the Tag, TagSubject, and Post models. The setUp method is used to create test data that is used in the test methods. The test methods use various assertions to check that the fields and methods of the Tag class are working as expected.
+The test case for the Tag model includes five test methods that check various aspects of the Tag model's implementation. The setUp method is run before each test method to set up the necessary objects for the test.
 
-<img src = "./static/images/Tag-Test.png" width = 550>
+The first test method test_title_field checks that the title field is a CharField with a maximum length of 200 and that it is unique.
+
+The second test method test_subject_field checks that the subject field is a ForeignKey to the TagSubject model and that the on_delete behavior is set to CASCADE. Also it check that the related_query_name is 'tags'.
+
+The third test method test_articles_field checks that the articles field is a ManyToManyField to the Post model and that the related_name is "tags".
+
+The fourth test method test_str_method checks that the __str__ method returns the correct string.
+
+The fifth test method test_article_count_method checks that the article_count method returns the correct number of articles.
+
+If all of these test methods pass, it suggests that the Tag model has been implemented correctly and meets the requirements specified in the test case.
+
+<img src = "./static/images/Tag-Test.png" width = 850>
+
 
 ### Comment class
 
-In this  test case, I create an instance of the Post model, and use it to create an instance of the Comment model in the setUp method. Then, I tested the string representation of the Comment model, the relationship between the Comment and Post models, the default value of the approved field, and the ordering of Comment objects.
+In this  test case, I create an instance of the Post model, and use it to create an instance of the Comment model in the setUp method. Then, I tested the string representation of the Comment model, the relationship between the Comment and Post models, the default value of the approved field, and the ordering of Comment objects. The test case includes four test methods that check various aspects of the Comment model's implementation. The setUp method is run before each test method to set up the necessary objects for the test.
 
-<img src = "./static/images/comment_test.png" width = 550>
+The first test method test_str_representation checks that the string representation of the Comment model is correct.
+
+The second test method test_post_relationship checks that the relationship between the Comment and Post models is correct.
+
+The third test method test_approved_default checks that the default value of the "approved" field is correct.
+
+The fourth test method test_ordering checks that the ordering of the comments is correct.
+
+If all of these test methods pass, it suggests that the Comment model has been implemented correctly and meets the requirements specified in the test case.
+
+<img src = "./static/images/comment_test.png" width = 850>
+
 
 
 ## Deployment 
