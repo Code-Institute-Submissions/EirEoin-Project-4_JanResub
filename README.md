@@ -27,7 +27,44 @@ The User can click on the tag and find articles of similar nature. Once we have 
 
 
 
-### Admin use
+## Approach
+
+
+### Design
+
+My Design Thinking approach to building Daily Galway was focused on understanding the needs and pain points of our users. I began by conducting user research and interviews to gather insights on what features and functionality users were looking for in a news aggregation platform. I also looked at the current offerings in the market and identified areas where I could improve and innovate.
+
+I used wireframes to experiment with different layouts, and to test ideas for how I wanted to present the content, how the navigation should work, and what elements should be included. This helped me to quickly iterate on different design options and identify the best approach for the website.
+
+<img src = "./static/images/HomePage.png" width = 1000>
+
+<img src = "./static/images/News Post.png" width = 1000>
+
+
+Once we had a solid wireframe in place, we added some creativity to it by experimenting with different visual elements such as typography, color scheme, and imagery. This helped to bring the wireframe to life and give it a more polished and professional appearance.
+
+We also had user testing with the wireframes to gather feedback and evaluate the effectiveness of the design choices. I asked my housemates, friends and family to interact with what I created and let me learn from their behaviour. This allowed me to make data-driven decisions and ensure that the final product was tailored to meet the needs of our users.
+
+The end result is a user-friendly and intuitive news platform that offers a personalized experience for users. With features such as user-generated content, voting, and commenting, we hope to create a community-driven platform where users can come together to discuss and share news.
+
+
+### Agile
+
+Using an Agile approach and Github Projects, I was able to effectively manage the website development project on my own.
+I created a project board and added columns for To-Do, In Progress, and Done tasks, which allowed me to easily visualize the progress of my work and quickly identify any blockers or issues that needed to be addressed. I broke down my goals into smaller, manageable tasks and moved them across the project board as they were completed. This helped me stay on track and ensure that I was making progress towards my larger goals.
+
+<img src = "./static/images/SS Agile-Process.png" width = 1000>
+
+Additionally, using Github Projects allowed me to collaborate and communicate effectively even though I was working alone. I commented on tasks, added attachments and even found myself enjoying myself, even if the team was only me. This helped me keep myself on the same page and ensure that I was aware of what needed to be done next.
+
+
+<img src = "./static/images/Agile-Done.png" width = 1000>
+
+Overall, my approach using Github Projects and an Agile methodology was successful in helping me manage the website development project, stay organized and focused, and adapt to changes as the project progressed
+
+
+
+## Admin use
 
 Admins can log in using our Django Sign In page.
 From there Admins can manage Posts, Comments, Tags and Tag Subjects.
@@ -43,10 +80,19 @@ Admin positions are assigned to Galway heads that can be trusted, open-minded an
 
 * Singing up and registering an account with a user created username
 
-* Liking and Commenting on Posts
+* Liking Posts 
+
+<img src = "./static/images/SS Like.png" width = 800>
+
+* Unliking Posts 
+
+<img src = "./static/images/SS Unlike.png" width = 1000>
 
 * Tags on Posts to Categorise them
 
+<img src = "./static/images/Tags-Footer.png" width = 1000>
+
+* Links to our Facebook, Instagram and Twitter
 
 
 ## Future Features 
@@ -69,14 +115,23 @@ Admin positions are assigned to Galway heads that can be trusted, open-minded an
 When deploying this Project to Heroku I encountered many problems with connecting PostGres and fully connecting my repositiory to Heroku. I solved this problem by installing a few more requirements and importing correctly.
 Indentation errors threw me back at first but finding them became easier throughout the build.
 Migrating succesfully was also a problem but once I fixed a spelling mistake we were on our way.
-When I turned DEBUG off before deployment, connection to my css was interuppted. I troubleshot that on google and found a small insert of code to fix the problem in the settings. 
+When I turned DEBUG off before deployment, connection to my css was interuppted. I troubleshot that on google and found a small insert of code to what I thought fixed the problem in the settings.
+I turns out I needed to Have DEBUG set to 'DEV' with an import attached so it can work with my css on github and on Heroku deployment.
+After I got this fixed I noticed my image fields weren't loading correctly. 
 
 The buttons on the Navbar did not work for registering or logging in but after a few tests we got them connecting correctly. The same issue came up when i turned DEBUG off.
 The Comment section threw an error at me for a while but we got the sign in linked to it, aswell as a pop up that times out once a comment is made.
 
-Github did not "add" or "push" anything to my repository succesfully after a whole late night session, even though it responded "Everything-up-to-date". This problem caused a lot of distress and worry. I had to try remember features i added, changed and discarded throughout the previous evening.
+Heroku changed it terms of services to a paid service which caused some distruption, I had to use ElephantSQL as a database instead.
 
-Heroku took an hour to deploy before submission so I was running through my code lookking for mistakes frantically troubleshooting but thankfully it deployed without any errors.
+<img src = "./static/images/Misspelling-Error.png" width = 900>
+
+Upon Fixing Broken image field i realised I had a misspelling in my code which threw my whole operation askew. I misspelled featured_image and it was engrained in the database, so even after the correction of the spelling on nearly every piece of html, it still wouldn't work.
+
+<img src = "./static/images/Misspelling-Error.png" width = 900>
+
+ I had to delete migrations and reset my Database to ressolve this error. It also costed me deleting the beautiful (imageless) Articles and post them again, even more beautiful. 
+
 
 ## Deployment 
 
