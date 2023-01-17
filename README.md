@@ -88,6 +88,10 @@ Admin positions are assigned to Galway heads that can be trusted, open-minded an
 
 <img src = "./static/images/SS Unlike.png" width = 1000>
 
+* Commenting on Posts
+
+<img src = "./static/images/Comments.png" width = 1000>
+
 * Tags on Posts to Categorise them
 
 <img src = "./static/images/Tags-Footer.png" width = 1000>
@@ -132,13 +136,30 @@ Upon Fixing Broken image field i realised I had a misspelling in my code which t
 
  I had to delete migrations and reset my Database to ressolve this error. It also costed me deleting the beautiful (imageless) Articles and post them again, even more beautiful. 
 
+ Please note
+
+In this project, the environment variables were previously exposed and have been changed for security reasons. As a result, a new Cloudinary account had to be created to get a new URL and make everything work again.
+
+## Testing 
+### Tag class 
+
+This test uses Django's built-in TestCase class to create and test instances of the Tag, TagSubject, and Post models. The setUp method is used to create test data that is used in the test methods. The test methods use various assertions to check that the fields and methods of the Tag class are working as expected.
+
+<img src = "./static/images/Tag-Test.png" width = 550>
+
+### Comment class
+
+In this  test case, I create an instance of the Post model, and use it to create an instance of the Comment model in the setUp method. Then, I tested the string representation of the Comment model, the relationship between the Comment and Post models, the default value of the approved field, and the ordering of Comment objects.
+
+<img src = "./static/images/Comments.png" width = 550>
+
 
 ## Deployment 
 
-The site was created using Github and deployed using heroku. The process began on github, connected my repository to heroku + PostGres and deployed on there too. It took some altering and lot of trial and Error but we truly hope everyone enjoys our creation.
+The site was created using Github and deployed using heroku. The process began on github, connected my repository to heroku + PostGres and deployed on there too. One potential struggle was configuring the database. Heroku's terms of service have changed, so I needed to use ElephantSQL as a database, which was unfamiliar adn tricky at first. This required some additional setup and configuration, which took some time to figure out. Additionally, it required additional code changes to connect to the ElephantSQL database.
+It took some altering and lot of trial and Error but we truly hope everyone enjoys our creation.
 
 ## Credits 
 
-I used The Coding Institute lessons in The Agile Development, HTML, CSS, Python, Javascript, Django and Postgres to Build this project. I used w3schools.com for some help with functions and model builds. I browsed well populated and heavily user Reddit for inspiration. I also used PEP - 8 to work with Python and realpython.com with the testing.
-I also used Stackoverflow alot to troubleshoot any problems I have.
-I used the Coding Institute Slack group for help Daily on this project, Thank you especially to everyong on there and to the tutor support!
+I used The Coding Institute lessons in The Agile Development, HTML, CSS, Python, Javascript, Django and Postgres to Build this project. I used w3schools.com for some help with functions and model builds. I browsed well populated and heavily user Reddit for inspiration. I also used PEP - 8 to work with Python and realpython.com with the testing. I also used Stackoverflow alot to troubleshoot any problems I have.
+I used the Coding Institute Slack group for help Daily on this project, Thank you especially to everyone on there and to the tutor support that helped along the way!
